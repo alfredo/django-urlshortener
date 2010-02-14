@@ -1,0 +1,18 @@
+URL shortener 
+
+Integrates with the admin, to track the number of clicks on a given IP
+
+Features:
+
+- Exclude URLSHORTENER_EXCLUDE_IPS from the trackiing
+- Identify bots and humans :)
+- Stats of the clicks
+
+
+Settings: 
+
+URLSHORTENER_EXCLUDE_IPS - List of ips for avoiding tracking
+
+URLSHORTENER_HISTORICAL - Requires cache enabled
+
+URLSHORTENER_CACHE_KEY -  URLSHORTENER by default
