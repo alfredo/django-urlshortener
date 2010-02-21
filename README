@@ -1,18 +1,27 @@
 URL shortener 
-
-Integrates with the admin, to track the number of clicks on a given IP
+Track the number of clicks on a given IP
 
 Features:
 
 - Exclude URLSHORTENER_EXCLUDE_IPS from the trackiing
-- Identify bots and humans :)
 - Stats of the clicks
 
 
 Settings: 
 
-URLSHORTENER_EXCLUDE_IPS - List of ips for avoiding tracking
+List of ips for avoiding tracking
+URLSHORTENER_EXCLUDE_IPS = []
 
-URLSHORTENER_HISTORICAL - Requires cache enabled
+IMPORTANT: Before enabling the Historical records make sure you have cache enabled, if you don't have cache enabled you are going to hit the database twice for each record.
 
+URLSHORTENER_HISTORICAL = True
 URLSHORTENER_CACHE_KEY -  URLSHORTENER by default
+
+URLSHORTENER_TIMEOUT = 86400        # 24 Hours
+URLSHORTENER_HISTORY_SAVE = 3600    # 1 Hour
+
+
+TODO:
+- Admin integration
+- Identify bots and humans :)
+- Tests!

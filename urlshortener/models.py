@@ -40,5 +40,9 @@ class ShortUrlHistory(models.Model):
     to work properly in order not to stress the DB
     """
     short_url = models.ForeignKey('urlshortener.ShortUrl')
-    created = models.DateTimeField()
+    created = models.DateTimeField(auto_now_add=True)
     clicks = models.PositiveIntegerField(default=0)
+
+    def __unicode__(self):
+        return u'Clicks for %s until at %s'  % (self.short_url,
+                                                self.created)
